@@ -31,6 +31,17 @@
         
         return @(userName.length && password.length);
     }];
+    
+    @weakify(self)
+    
+    [[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *button) {
+        
+        @strongify(self)
+        
+        [self.view endEditing:YES];
+        
+        LMAlertShow(@"Welcome");
+    }];
 }
 
 @end
