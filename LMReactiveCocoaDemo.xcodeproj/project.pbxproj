@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62D5A233ADAF4AE2391C139A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7E081D0A806433EB0FAC2A /* libPods.a */; };
+		E472981B1B746AF90084C12D /* LoginDemoTC.m in Sources */ = {isa = PBXBuildFile; fileRef = E472981A1B746AF90084C12D /* LoginDemoTC.m */; };
 		E4F8B2911B744C9600628110 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F8B2901B744C9600628110 /* main.m */; };
 		E4F8B2941B744C9600628110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F8B2931B744C9600628110 /* AppDelegate.m */; };
 		E4F8B29A1B744C9600628110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F8B2981B744C9600628110 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 		1D482FBECE209CC7C0812D22 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4A7E081D0A806433EB0FAC2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9801BEBCF0F71BBDC694E3F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E47298191B746AF90084C12D /* LoginDemoTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginDemoTC.h; sourceTree = "<group>"; };
+		E472981A1B746AF90084C12D /* LoginDemoTC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginDemoTC.m; sourceTree = "<group>"; };
 		E4F8B28B1B744C9600628110 /* LMReactiveCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMReactiveCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F8B28F1B744C9600628110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4F8B2901B744C9600628110 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 			children = (
 				E4F8B2B51B744DE700628110 /* SearchDemoTC.h */,
 				E4F8B2B61B744DE700628110 /* SearchDemoTC.m */,
+				E47298191B746AF90084C12D /* LoginDemoTC.h */,
+				E472981A1B746AF90084C12D /* LoginDemoTC.m */,
 			);
 			name = Controller;
 			path = Class/Controller;
@@ -288,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F8B2B71B744DE700628110 /* SearchDemoTC.m in Sources */,
+				E472981B1B746AF90084C12D /* LoginDemoTC.m in Sources */,
 				E4F8B2941B744C9600628110 /* AppDelegate.m in Sources */,
 				E4F8B2911B744C9600628110 /* main.m in Sources */,
 			);
