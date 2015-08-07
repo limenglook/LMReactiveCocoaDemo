@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LMKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5D40058A58FDCCDD92F8074C7D0425E6</key>
+		<key>6951DA9871DA259A9AAA6EFC68AEF8EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6951DA9871DA259A9AAA6EFC68AEF8EB</key>
+		<key>8A07548FE1A637259A8DBF8DE48195F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3D054329DB41AD328A4EAFDB38ACABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
