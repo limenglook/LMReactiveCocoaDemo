@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SearchDemoTC.h
 //  LMReactiveCocoaDemo
 //
 //  Created by 李蒙 on 15/8/7.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SearchDemoTC : UITableViewController
 
 @end
-
