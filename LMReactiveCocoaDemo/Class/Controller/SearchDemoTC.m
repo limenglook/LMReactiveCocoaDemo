@@ -30,7 +30,7 @@
         
         self.searchTexts = [NSMutableArray array];
         
-        for (NSInteger index; index < 20; index++) {
+        for (NSInteger index = 0; index < 20; index++) {
             
             switch ([self lm_randomInteger:0 to:2]) {
                 case 0:
