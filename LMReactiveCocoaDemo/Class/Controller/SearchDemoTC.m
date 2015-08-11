@@ -58,7 +58,7 @@
     
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    RAC(self, searchResults) = [self rac_liftSelector:@selector(search:) withSignals:[[self rac_signalForSelector:@selector(searchBar:textDidChange:) fromProtocol:@protocol(UISearchBarDelegate)] map:^id(RACTuple *tuple) {
+    [self rac_liftSelector:@selector(search:) withSignals:[[self rac_signalForSelector:@selector(searchBar:textDidChange:) fromProtocol:@protocol(UISearchBarDelegate)] map:^id(RACTuple *tuple) {
         
         return tuple.second;
         
@@ -74,19 +74,29 @@
     }];
 }
 
-- (NSArray *)search:(NSString *)searchText
+- (void)search:(NSString *)searchText
 {
-    NSMutableArray *results = [NSMutableArray array];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    for (NSString *text in self.searchTexts) {
+    [self lm_performBlock:^{
         
-        if([[text lowercaseString] rangeOfString:[searchText lowercaseString]].location != NSNotFound) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        
+        NSMutableArray *results = [NSMutableArray array];
+        
+        for (NSString *text in self.searchTexts) {
             
-            [results addObject:text];
+            if([[text lowercaseString] rangeOfString:[searchText lowercaseString]].location != NSNotFound) {
+                
+                [results addObject:text];
+            }
         }
-    }
-    
-    return results;
+        
+        self.searchResults = results;
+        
+        [self.searchDisplayController.searchResultsTableView reloadData];
+        
+    } afterDelay:[self lm_randomInteger:0.5 to:1]];
 }
 
 #pragma mark - UITableViewDataSource
@@ -110,6 +120,11 @@
     cell.textLabel.text = self.isSearching ? self.searchResults[indexPath.row] : self.searchTexts[indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.searchDisplayController setActive:NO animated:YES];
 }
 
 @end
